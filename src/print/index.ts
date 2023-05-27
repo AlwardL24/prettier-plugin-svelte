@@ -233,8 +233,7 @@ export function print(path: FastPath, options: ParserOptions, print: PrintFn): D
 
             const isSelfClosingTag =
                 isEmpty &&
-                (!options.svelteStrictMode ||
-                    node.type !== 'Element' ||
+                (node.type !== 'Element' ||
                     selfClosingTags.indexOf(node.name) !== -1 ||
                     isDoctypeTag);
 
